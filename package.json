@@ -1,8 +1,20 @@
 {
-  "name": "fileverse-md2html",
+  "name": "@fileverse-dev/md2slides",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.es.js",
+      "import": "./dist/index.es.js"
+    },
+    "./types": "./dist/src/convert-markdown.d.ts"
+  },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,11 +23,12 @@
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/markdown-it-footnote": "^3.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
     "typescript": "~5.6.2",
-    "vite": "^6.0.1"
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0"
   },
   "dependencies": {
-    "dompurify": "^3.2.2",
     "isomorphic-dompurify": "^2.18.0",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0"
