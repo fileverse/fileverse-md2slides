@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "dompurify": "^3.2.2",
+    "isomorphic-dompurify": "^2.18.0",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0"
   }

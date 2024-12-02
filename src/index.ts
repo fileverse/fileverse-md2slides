@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it';
 import markdownItFootnote from 'markdown-it-footnote';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 const markdownIt = new MarkdownIt({
   html: true,
