@@ -138,7 +138,7 @@ export function convertMarkdownToHTML(
           if (shouldCreateNewSection(line, currentSection)) {
             createNewSection()
           }
-          currentSection.push({ type: "content", content: line })
+          currentSection.push({ type: "image", content: imgMatch[2] })
         }
         createNewSection()
       }
