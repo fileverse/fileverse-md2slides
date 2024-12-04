@@ -63,3 +63,39 @@
 .slide ul {
   font-size: 24px;
 }
+
+.slide .table-wrapper {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.slide table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+.slide th,
+.slide td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.slide th p,
+.slide td p {
+  font-size: 20px;
+}
+
+.slide th {
+  background-color: #F5F5F5;
+  font-weight: bold;
+}
+
+.slide th p {
+  font-weight: 700;
+}
+
+.slide tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
