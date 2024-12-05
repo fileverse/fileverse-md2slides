@@ -1,61 +1,99 @@
 ## Fileverse MD2Slides
 
-Convert markdown to HTML slides.
+A library to convert Markdown content into HTML slides with customizable options.
 
-### Install
+### Installation
 
 ```bash
 npm install @fileverse-dev/md2slides
 ```
 
-
-### Usage
+### Basic Usage
 
 ```tsx
 import { convertMarkdownToHTML } from '@fileverse-dev/md2slides';
+
+const markdown = `
+# Slide 1
+This is the first slide
+
+---
+
+# Slide 2
+This is the second slide
+`;
+
+const html = convertMarkdownToHTML(markdown);
 ```
 
-### Styles
+### Configuration
 
-Styles are exported as a CSS file. It's completely optional, but if you want to use the default styles, you can import them like this:
+The `convertMarkdownToHTML` function accepts two parameters:
+- `markdown`: Your markdown content (required)
+- `options`: Configuration object (optional)
 
+```tsx
+type Options = {
+  preserveNewlines: boolean;  // Preserve line breaks in the output
+  sanitize: boolean;         // Sanitize HTML input
+  maxCharsPerSlide: number;  // Maximum characters per slide
+  maxWordsPerSlide: number;  // Maximum words per slide
+  maxLinesPerSlide: number;  // Maximum lines per slide
+};
+```
+
+Default options:
+```tsx
+{
+  preserveNewlines: true,
+  sanitize: true,
+  maxCharsPerSlide: 1000,
+  maxWordsPerSlide: 250,
+  maxLinesPerSlide: 7,
+}
+```
+
+### Styling
+
+The library includes optional default styles that you can import:
+
+#### With CSS Modules/Preprocessors
 ```css
 @import '@fileverse-dev/md2slides/styles';
 ```
 
---------------------------------
+#### With Plain HTML
+```html
+<link rel="stylesheet" href="md2slides.css"/>
+```
 
-### Plain HTML
+### Browser Usage
 
-If you want to use with plain HTML, you can use the following:
+For plain HTML/JavaScript projects:
 
-Right now, the only way to use the library is to use the build file and include it in your project.
-
-To do that, clone the repo and build the project:
-
-```bash 
+1. Build the library:
+```bash
 npm run build
 ```
 
-Go to your dist folder and include the `index.min.js` file in your project:
-
+2. Include the built files in your HTML:
 ```html
-<script src="index.min.js"></script>
+<script src="dist/index.min.js"></script>
+<link rel="stylesheet" href="dist/md2slides.css"/>
 ```
 
-Then, you can use the `convertMarkdownToHTML` function to convert your markdown to HTML slides.
+3. Use the global `md2slides` object:
+```javascript
+const html = window.md2slides.convertMarkdownToHTML(`
+# My Presentation
+First slide content
 
-For Example:
+---
 
-```tsx
-const _u = window.md2slides;
-const html = _u.convertMarkdownToHTML('# Hello, world!');
-```
+## Second Slide
+- Point 1
+- Point 2
+`);
 
-#### Optional Styles
-
-If you want to use the default styles, you can import them like this:
-
-```css
-<link rel="stylesheet" href="md2slides.css"/>
+document.getElementById('slides').innerHTML = html;
 ```
