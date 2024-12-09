@@ -30,7 +30,7 @@ const markdown = `
 # Slide 1
 This is the first slide
 
----
+===
 
 # Slide 2
 This is the second slide
@@ -101,7 +101,7 @@ const html = window.md2slides.convertMarkdownToHTML(`
 # My Presentation
 First slide content
 
----
+===
 
 ## Second Slide
 - Point 1
