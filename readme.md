@@ -1,10 +1,10 @@
 ## Fileverse MD2Slides
 
-Convert Markdown to HTML / PDF slides with customizeable pagination and styles. Standardized for compatibility with most editors.  
-  
-Download the package below or use the app directly: **ddocs.new** (live 12/12/24)  
+Convert Markdown to HTML / PDF slides with customizeable pagination and styles. Standardized for compatibility with most editors.
 
-ddocs.new is a privacy preserving and decentralized alternative to gDocs created by @fileverse.  
+Download the package below or use the app directly: [ddocs.new](http://ddocs.new/)
+
+[ddocs.new](http://ddocs.new/) is a privacy preserving and onchain alternative to gDocs created by @fileverse.
   
 **Quick examples:**
 
