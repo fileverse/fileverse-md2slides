@@ -4,7 +4,7 @@ Convert Markdown to HTML / PDF slides with customizeable pagination and styles. 
 
 Download the package below or use the app directly: [ddocs.new](http://ddocs.new/)
 
-[ddocs.new](http://ddocs.new/) is a privacy preserving and onchain alternative to gDocs created by @fileverse.
+[ddocs.new](http://ddocs.new/) is a privacy preserving and onchain alternative to gDocs created by [@fileverse.](https://github.com/fileverse)
   
 **Quick examples:**
 
